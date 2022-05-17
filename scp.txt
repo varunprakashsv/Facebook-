@@ -1,0 +1,115 @@
+grep -c "devops" filename
+
+used to count the number of lines which have that pattern.
+
+Assignment
+-----------
+
+softlink --> 
+it is a shortcut to a file, if we make any changes in the original file it
+will get reflected in the softlink, if we delete the orignal file,
+softlink will not work,
+ln -s filename linkname
+
+hardlink
+it is a shortcut to a file, if we make any changes in the original file it
+will get reflected in the softlink, if we delete the orignal file, still
+the hardlink will work bcz it's points to a inode of file 
+inode means unique identification number for a file in system memory
+
+ln filename linkname
+
+
+ps
+--
+it is used to list current running process on a system.
+
+ps -eaf
+
+
+search a particular process is running or not
+
+ps -eaf | grep "processname"
+
+kill a process
+
+used to stop the process forcefully.
+
+kill -9 PID
+
+whoami --> which user you have logged in
+who --> who are all the users logged in to s/m.
+
+hostmame --> check the server name
+
+Assignment --> edit   the hostname
+
+create a 2 servers, add a user
+1. user1 --> passowrd
+2. user2
+
+
+ssh 
+----
+
+used to login to remote server
+
+
+ssh username@servername 
+
+servername --> ipaddress/hostname
+
+scp
+---
+used to copy a file from one server to other server.
+
+scp filename username@server2:/home/ec2-user/
+password:
+
+scp -r filename username@server2:/home/ec2-user/
+
+
+rsync
+------
+used to copy a file from one server to other server and also we can use
+within the server
+while copyiing if copy is stopped in between due to some interpution,
+once the   s/m is back if i reissue the command, it will start copying from
+where it was stopped.
+rsync will compare and copy, scp will not compare
+
+rsync filename username@server2:/home/ec2-user/
+
+
+ping
+----
+
+user to check the server is up and running or not
+
+ping ipaddress
+
+telnet
+------
+
+it is used to check the specific port is open or not
+
+telnet ipaddrss portnumber
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
